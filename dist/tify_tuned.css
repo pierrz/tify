@@ -1,0 +1,273 @@
+/* ======================================================================================= */
+/* TIFY */
+
+/* -------------------- */
+/* Main */
+div#viewer {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex: 1;
+    position: relative;
+    /* matching the navbar settings  */
+    min-height: 93vh;
+    /* min-height: 93.5vh;      */
+}
+
+div#viewer.small_tify {
+    min-height: 88vh;
+}
+
+#viewer .tify-scan {
+    background: transparent;
+    box-shadow: none;
+}
+#viewer .tify-app {
+    background-color: var(--main-dark); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, var(--main-dark-lighter),var(--main-dark-lighter-plus),var(--main-dark-lighter)); /* Standard syntax (must be last) */
+    /* overflow: visible; */
+}
+
+#viewer .tify-app h3,
+#viewer .tify-app a {
+    border-bottom: 1px solid var(--transp);
+    color: var(--txt-flat-light);
+}
+#viewer .tify-app h3 {
+    margin-top: 1.8rem;
+    margin-bottom: .4rem;
+    font-size: 1rem;
+}
+#viewer .tify-app a {
+    /* color: var(--transp-lighter);  */
+    padding-bottom: .3rem;
+    margin-left: 1rem;
+    font-size: .85rem;
+}
+#viewer .tify-app .tify-export_links li {
+    margin-top: 1rem;
+}
+#viewer .tify-app .tify-export_links li:first-child {
+    margin-top: default;
+}
+
+#viewer .tify-app .seeAt {
+    padding-left: 1rem;
+    margin-top: -.6rem;
+}
+#viewer .tify-app a:hover {
+    color: var(--second-flat);
+    border-bottom: 1px solid var(--second-flat);
+}
+
+
+/* -------------------- */
+/* Header */
+#viewer .tify-header {
+    background: transparent;
+    box-shadow: none;
+    z-index: 1;
+    position: absolute;
+    width: 30rem;
+    right: 0;
+    top: 1rem;
+}
+#viewer .tify-header h1 {
+    margin-right: -.5rem;
+    background: var(--transp);
+    color: var(--txt-lighter);
+    width: fit-content;
+    float: right;
+    padding: .1rem .5rem;
+}
+#viewer .tify-header h1.tify-header_title:hover {
+    background: var(--txt-lighter);
+    color: var(--txt-darker);
+}
+#viewer .tify-header h1.tify-header_title
+#viewer .tify-header h1.tify-header_title:hover {
+    -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.tify-header_column {
+    min-width: 0;
+    display: inline-block;
+}
+
+.tify-header_column:first-child {
+    min-width: 80%;
+    padding-right: 1.1rem;
+}
+.tify-header_column:nth-child(2) {
+    min-width: 20%;
+    z-index: 5;
+}
+.tify-header_column:nth-child(3) {
+    width: 60%;
+    margin-left: 37%;
+    display: block;
+    z-index: 4;
+}
+.tify-header_column:nth-child(3) .tify-header_button-group {
+    float: right
+}
+.tify-header_column:nth-child(2) .tify-header_button-group:first-child > button.tify-header_button,
+.tify-header_column:nth-child(3) .tify-header_button-group > .tify-header_button,
+.tify-header_column:nth-child(3) .tify-header_button-group > div.tify-page-select button {
+    background: var(--transp);
+    color: var(--txt-lighter);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.tify-header_column:nth-child(2) .tify-header_button-group.-view {
+    margin-right: 1rem;
+    right: .15rem;
+}
+.tify-header_column:nth-child(2) .tify-header_button-group.-view > button.tify-header_button {
+    min-width: fit-content;
+}
+
+
+.tify-header_column:nth-child(2) .tify-header_button-group:first-child > button.tify-header_button:hover,
+.tify-header_column:nth-child(3) .tify-header_button-group > button.tify-header_button:hover,
+.tify-header_column:nth-child(3) .tify-header_button-group > div.tify-page-select button:hover,
+.tify-header_column:nth-child(2) .tify-header_button-group:nth-child(2) > button.tify-header_button.-active {
+    background: var(--txt-lighter);
+    color: var(--txt-darker);
+}
+
+.tify-header_column:nth-child(3) .tify-header_button-group > div.tify-page-select button {
+    background: transparent;
+}
+.tify-header_column:nth-child(3) > .tify-header_button-group:first-child > button {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+.tify-header_column:nth-child(3) .tify-header_button-group:first-child button.tify-header_button,
+.tify-header_button-group.-pagination > button.tify-header_button {
+    border-left: solid 1px var(--transp-lighter);
+}
+.tify-header_button-group.-pagination > button:first-child.tify-header_button {
+    border-left: solid 1px transparent;
+}
+
+.tify-app .tify-header_button-group.-view.-visible {
+    z-index: 4;
+}
+
+
+/* -------------------- */
+/* Side panels */
+section.tify-info .tify-info_section > div {
+    font-size: 1.2rem;
+}
+section.tify-info .tify-info_section.-metadata > div {
+    font-size: 1rem;
+}
+
+.tify-scan_buttons {
+    padding-top: 3rem;
+}
+
+#viewer .tify-export, 
+#viewer .tify-info, 
+#viewer .tify-thumbnails, 
+#viewer .tify-help {
+    background-color: var(--main-dark-darker);
+    /* border-top-width: 12.5rem; */
+    border-top-style: solid;
+    border-top-color: var(--main-dark-darker);
+    box-shadow: none;
+    
+    /* -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease; */
+}
+#viewer .tify-info {
+    background-color: var(--main-dark);
+}
+
+#viewer .tify-info div .tify-info_value,
+.tify-app {
+    color: var(--txt-light);
+}
+
+.tify-info_section .-metadata div div {
+    color: var(--transp);
+}
+
+
+/* -------------------- */
+/* Features icon on the right */
+.tify-scan_filter-popup p,
+.tify-scan_filter-popup p button.tify-scan_reset {
+    color: var(--txt-dark)
+}
+.tify-scan_filter-popup p button.tify-scan_reset:hover {
+    color: var(--txt-darker)
+} 
+
+/* -------------------- */
+/* Media queries */
+@media (max-width: 700px) {
+    #viewer .tify-export, 
+    #viewer .tify-info, 
+    #viewer .tify-thumbnails, 
+    #viewer .tify-help {
+        border-top-width: 6.3rem;
+    }
+}
+@media (min-width: 700px) {
+    #viewer .tify-export, 
+    #viewer .tify-info, 
+    #viewer .tify-thumbnails, 
+    #viewer .tify-help {
+        border-top-width: 9rem;
+    }
+}
+@media (max-width: 1088px) {
+    #viewer .tify-header,
+    #viewer .tify-header .tify-header_column {
+        right: -0.4rem;
+        top: 0.3rem;
+    }
+    .tify-header_column:nth-child(2) .tify-header_button-group.-toggle {
+        margin-right: 1rem;
+        right: .15rem;
+    }
+}
+@media (min-width: 1300px) {
+    #viewer .tify-export, 
+    #viewer .tify-info, 
+    #viewer .tify-thumbnails, 
+    #viewer .tify-help {
+        border-top-width: 12.5rem;
+    }
+    #viewer .tify-header h1 {
+        margin-right: -.05rem;
+    }
+    #viewer .tify-header .tify-header_column.-views {
+        width: 55%;
+        margin-left: 45%;
+        display: block;
+    }
+    .tify-header_column:nth-child(2) .tify-header_button-group:nth-child(2) > button.tify-header_button {
+        background: var(--transp);
+        color: var(--txt-lighter);
+        box-shadow: none;
+        text-shadow: none;
+        border-left: solid 1px var(--transp-lighter);
+    } 
+    .tify-header_column:nth-child(2) .tify-header_button-group:nth-child(2) > button:nth-child(2).tify-header_button {
+        border-left: solid 1px transparent;
+    } 
+    .tify-header_column:nth-child(2) .tify-header_button-group:nth-child(2) > button.tify-header_button:hover {
+        background: var(--txt-lighter);
+        color: var(--txt-darker);
+    }   
+}
